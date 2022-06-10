@@ -52,4 +52,4 @@ else:
 	print(f"\nModel {current_model} not found. Exiting..")
 	os._exit(1)
 
-client.run("OTc4MDc3MDgyOTgwNjEwMDY4.G7Uzw7.rgxOM1z1TaeHbQdT8km_n63xPNpsrstoZeCeRY")
+client.run("xxx")

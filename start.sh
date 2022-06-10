@@ -1,12 +1,7 @@
 #!/bin/bash
 
-
 OS=$(uname -o)
 USR=$(whoami)
-
-train() {
-	python train.py
-}
 
 bot() {
 	echo -e "\nLoading Discord bot.\n\nUse other model?"
@@ -16,4 +11,4 @@ bot() {
 
 clear; echo -e "\n======== EP3 - IA =========\n\nWelcome $USR, starting EP3 on $OS.."
 
-[[ "$1" == [Tt]rain ]] &&  train || bot 
+[[ "$1" == [Tt]rain ]] &&  python train.py || bot

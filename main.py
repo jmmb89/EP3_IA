@@ -3,7 +3,7 @@ import discord
 import requests
 from ia import train, load, predict
 
-current_model = "traffic_sign_model"
+current_model = "traffic25"
 c_model = None
 client = discord.Client()
 

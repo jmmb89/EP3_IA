@@ -42,17 +42,11 @@ async def on_message(message):
 
 print('\n'+8*'='+ ' EP3 - PI '+8*'=')
 
-if not os.path.exists("models"):
-	os.makedirs("models")
+dirs = ["models", "logs", "downloads", "database"]
 
-if not os.path.exists("logs"):
-	os.makedirs("logs")
-
-if not os.path.exists("downloads"):
-	os.makedirs("downloads")
-
-if not os.path.exists("database"):
-	os.makedirs("database")
+for i in range(len(dirs)):
+	if not os.path.exists(dirs[i]):
+		os.makedirs(dirs[i])
 
 if len(sys.argv) > 1:
 	current_model = os.path.splitext(sys.argv[1])[0]

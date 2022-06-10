@@ -9,6 +9,7 @@ client = discord.Client()
 
 def download_file(url):
 	download = requests.get(url)
+	#arrumar o path p/ windows
 	local_file = url.split('/')[-1]
 	#os.path.join("/{}/{}")
 	path = f"downloads/{local_file}"
@@ -40,6 +41,18 @@ async def on_message(message):
 				await channel.send("Failed loading image..")
 
 print('\n'+8*'='+ ' EP3 - PI '+8*'=')
+
+if not os.path.exists("models"):
+	os.makedirs("models")
+
+if not os.path.exists("logs"):
+	os.makedirs("logs")
+
+if not os.path.exists("downloads"):
+	os.makedirs("downloads")
+
+if not os.path.exists("database"):
+	os.makedirs("database")
 
 if len(sys.argv) > 1:
 	current_model = os.path.splitext(sys.argv[1])[0]

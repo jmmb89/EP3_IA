@@ -33,6 +33,10 @@ tensorflow
 Trabalho feito para o curso de inteligencia arificial do BCC - Senac. \
 O objetivos era criar um bot de discord capaz de reconhecer imagens de placas de transito da alemanha.
 
+## Video:
+
+https://www.youtube.com/watch?v=OqmfmZ1i6xs
+
 ## Alunos:
 
 Joao Barradas, Leandro Borges, Luker Almeida

@@ -4,9 +4,15 @@ OS=$(uname -o)
 USR=$(whoami)
 
 bot() {
-	echo -e "\nLoading Discord bot.\n\nUse other model?"
+	echo -e "\nLoading Discord bot.\n\nUse other model? [N,y]"
 	read -p "> " ANS
-	[[ "$ANS" != [Yy]* ]] && python main.py 2> /dev/null || echo -e "\nWrite the model name:"; read -p "> " NAME; python main.py $NAME 2> /dev/null
+	if [[ "$ANS" != [Yy]* ]]; then
+		python main.py 2> /dev/null
+	else
+		echo -e "\nWrite the model name:"
+		read -p "> " NAME
+		python main.py $NAME 2> /dev/null
+	fi
 }
 
 clear; echo -e "\n======== EP3 - IA =========\n\nWelcome $USR, starting EP3 on $OS.."

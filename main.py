@@ -6,13 +6,13 @@ from ia import train, load, predict
 current_model = "traffic25"
 c_model = None
 client = discord.Client()
+discord_token = "OTc4MDc3MDgyOTgwNjEwMDY4.GIOeFX.LtzzxEKXZzTIShHSBg2Ai-HdnrS5Dqa5cCFZDw"
 
 def download_file(url):
 	download = requests.get(url)
-	#arrumar o path p/ windows
 	local_file = url.split('/')[-1]
-	#os.path.join("/{}/{}")
-	path = f"downloads/{local_file}"
+	path = os.path.join("downloads", local_file)
+	#path = f"downloads/{local_file}"
 	with open(path, 'wb') as f:
 		f.write(download.content)	
 	return path
@@ -59,5 +59,7 @@ else:
 	print(f"\nModel {current_model} not found. Exiting..")
 	os._exit(1)
 
-#usar token do discord
-client.run("xxx")
+try:
+	client.run(discord_token)
+except:
+	print("Failed connecting to discord..")

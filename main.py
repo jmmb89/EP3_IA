@@ -6,7 +6,7 @@ from ia import train, load, predict
 current_model = "traffic25"
 c_model = None
 client = discord.Client()
-discord_token = "OTc4MDc3MDgyOTgwNjEwMDY4.GIOeFX.LtzzxEKXZzTIShHSBg2Ai-HdnrS5Dqa5cCFZDw"
+discord_token = "token"
 
 def download_file(url):
 	download = requests.get(url)

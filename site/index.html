@@ -1,0 +1,68 @@
+<html>
+
+<style>
+body {
+    <!-- background-color:#3a3a3a; -->
+    background-color:#E0E0E0;
+}
+</style>
+<head>
+   <h1>Projeto Integrador - Inteligencia Aritificial</h1>
+</head>
+<body>
+<div class="frame">
+
+ <h2>Proposta:</h2>
+
+Para esta ADO, o grupo deverá criar um modelo que aprende a classificar imagens a partir de um dataset. O modelo deve ser incluído em um bot do Discord e subir em uma hospedagem gratuita como Heroku. Os alunos poderão escolher um dos datasets abaixo. Não serão permitidos outros datasets.
+
+
+<h2>Dependencias:</h2>
+Tensorflow
+<br>
+keras
+<br>
+Pandas
+<br>
+Pillow
+<br>
+numpy
+<br>
+Scikit
+
+<h2>Treinamento:</h2>
+
+A arquitetura de rede escolhida para o trabalho é uma rede neural de multicamadas. As imagens usadas para treinar foram reudizas a 30px por 30px. Os hiperparâmetros foram escolhidos através da análise de perda e ganho observadas nos graficos gerados pelo TensorBoard. O modelo pode ser salvo usando a função model.save que gera um arquivo .keras ou .h5 que poderá ser carregado e utilizado posteiormente.
+
+<h2>Uso do modelo:</h2>
+
+O programa carrega o modelo gerado pelo treinamento e usa a funcão predict para gerar uma array com os valores atribuidos a cada categoria. O maior valor será o o valor de certeza que o modelo tem sobre a imagem. Para retornar ao usuário o nome da categoria reconhecida usamos a funcao np.argmax na array que retorna do predict para pegar o indice do maior valor, em seguida usamos esse indice na array que contem os nomes das categorias, retornando para o usuário apenas a string que contém o nome da categoria.
+
+<h2>Links:</h2>
+
+<p>
+<a href="https://prnt.sc/dz-pRa2bKpoZ" target="_blank">Imagem do Bot Funcionando</a>
+<br>
+<a href="https://discord.com/api/oauth2/authorize?client_id=978077082980610068&permissions=8&scope=bot" target="_blank">Link para adicionar o Bot</a>
+<br>
+<a href="https://github.com/LeandroRaik/Pi3" target="_blank">Git com o Source Code</a>
+</p>
+
+<h2>Bibliografia:</h2>
+<a href="https://colab.research.google.com/drive/1ArGJ1N5HavdpQGHtP8VYkQ66ZdkoekEy#scrollTo=tmt1ebV7dN2x" target="_blank"> Referência de código</a>
+<br> 
+<a href="https://data-flair.training/blogs/python-project-traffic-signs-recognition/" target="_blank">Referência de código e Dataset</a>
+
+<h2>Alunos:</h2>
+João Mario Motidome Barradas
+<br>
+Leandro Borges de Moura 
+<br>
+Luker Almeida
+
+</div>
+
+</body>
+
+
+</html>

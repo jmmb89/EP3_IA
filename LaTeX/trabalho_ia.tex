@@ -1,0 +1,38 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amstext}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage{amssymb}
+
+\title{PROJETO INTEGRADOR\\INTELIGENCIA ATRIFICIAL}
+\author{João Mario Motidome Barradas\\Leandro Borges de Moura}
+
+\date{10, Junho, 2022}
+
+\begin{document}
+
+\maketitle
+
+\paragraph{Proposta:}
+
+\paragraph{}
+
+Para esta ADO, o grupo deverá criar um modelo que aprende a classificar imagens a partir de um dataset. O modelo deve ser incluído em um bot do Discord e subir em uma hospedagem gratuita como Heroku. Os alunos poderão escolher um dos datasets abaixo. Não serão permitidos outros datasets.
+
+
+\paragraph{Treinamento do modelo:}
+
+\paragraph{}
+
+A arquitetura de rede escolhida para o trabalho é uma rede neural de multicamadas. As imagens usadas para treinar foram reudizas a 30px por 30px. Os hiperparâmetros foram escolhidos através da análise de perda e ganho observadas nos graficos gerados pelo TensorBoard. O modelo pode ser salvo usando a função model.save que gera um arquivo .keras ou .h5 que poderá ser carregado e utilizado posteiormente.
+
+
+\paragraph{Uso do modelo:}
+
+\paragraph{}
+
+O programa carrega o modelo gerado pelo treinamento e usa a funcão predict para gerar uma array com os valores atribuidos a cada categoria. O maior valor será o o valor de certeza que o modelo tem sobre a imagem. Para retornar ao usuário o nome da categoria reconhecida usamos a funcao np.argmax na array que retorna do predict para pegar o indice do maior valor, em seguida usamos esse indice na array que contem os nomes das categorias, retornando para o usuário apenas a string que contém o nome da categoria.
+
+
+\end{document}

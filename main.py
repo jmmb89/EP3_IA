@@ -59,4 +59,5 @@ else:
 	print(f"\nModel {current_model} not found. Exiting..")
 	os._exit(1)
 
+#usar token do discord
 client.run("xxx")

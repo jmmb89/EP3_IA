@@ -16,10 +16,9 @@ tensorflow
 
 ### Treino:
 
--Colocar o dataset dentro da pasta database \
+-Colocar o dataset dentro da pasta database
 
 ./start.sh train
-
 
 ### Bot Discord:
 
@@ -36,4 +35,4 @@ O objetivos era criar um bot de discord capaz de reconhecer imagens de placas de
 
 ## Alunos:
 
-Joao Barradas e Leandro Borges
+Joao Barradas, Leandro Borges, Luker Almeida
